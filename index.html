@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FM Liquor Store - Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+<div class="container">
+
+  <img src="Logo.png" alt="FM Liquor Store Logo" class="logo" />
+
+  <h2 class="title">FM Liquor Store</h2>
+
+  <p class="subtitle">
+    Te pedimos que dediques un momento para compartir tu experiencia con nosotros.<br>
+    Tu opinión nos ayuda a mejorar y a orientar a nuevos clientes.
+  </p>
+
+  <h3 class="question">¿Nos recomendarías?</h3>
+
+  <div class="rating">
+    <button class="rate green" onclick="showGoogle()">⭐ 5</button>
+    <button class="rate green" onclick="showGoogle()">⭐ 4</button>
+
+    <a class="rate red" href="negativa.html">⭐ 3</a>
+    <a class="rate red" href="negativa.html">⭐ 2</a>
+    <a class="rate red" href="negativa.html">⭐ 1</a>
+  </div>
+
+  <p class="note">
+    Si tu experiencia no fue excelente, queremos solucionarlo.
+  </p>
+
+  <a class="contact-btn" href="https://wa.me/18095382957?text=Hola%20FM%20Liquor%20Store,%20quiero%20hablar%20de%20un%20problema." target="_blank">
+      Contáctanos
+  </a>
+
+</div>
+
+<!-- POPUP GOOGLE -->
+<div id="googlePopup" class="popup hidden">
+  <div class="popup-box">
+
+    <div class="close-popup" onclick="closePopup()">✕</div>
+
+    <p class="popup-text">
+      Nos alegra mucho saber que nos recomendarías.<br>
+      Por favor comparte tu experiencia haciendo clic en el logo.
+    </p>
+
+    <a href="https://www.google.com/maps/place/FM+Liquor+Store+%26+Grill/@19.2064759,-69.3486585,17z/data=!3m1!4b1!4m6!3m5!1s0x8eaee1e413f3eee9:0xd08c3a136754bc49!8m2!3d19.2064759!4d-69.3486585!16s%2Fg%2F11p17s73pt?entry=ttu" target="_blank">
+      <img src="GoogleScritta.png" class="google-img" alt="Deja una reseña en Google">
+    </a>
+
+
+    <p class="popup-small">
+      Si tienes dudas que deseas tratar en privado, contáctanos.
+    </p>
+
+    <a class="contact-btn small" href="https://wa.me/18095382957?text=Hola%20FM%20Liquor%20Store,%20quiero%20hablar%20de%20un%20problema." target="_blank">
+        Contáctanos
+    </a>
+
+  </div>
+</div>
+
+  </div>
+
+  <script>
+    function showGoogle() {
+      document.getElementById("googlePopup").classList.remove("hidden");
+    }
+
+    function closePopup() {
+        document.getElementById("googlePopup").classList.add("hidden");
+    }
+    </script>
+</body>
+</html>

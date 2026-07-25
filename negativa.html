@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FM Liquor Store - Reporte de Cliente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="negative-body">
+
+  <div class="exit-top-right" onclick="goHome()">✕</div>
+
+  <div class="negative-container">
+
+    <img src="Logo.png" class="negative-logo" alt="Logo FM Liquor Store">
+
+    <h2 class="negative-title">FM Liquor Store</h2>
+
+    <p class="negative-subtitle">
+      Nos comprometemos al 100% con la satisfacción del cliente.<br>
+      Cuéntanos qué podríamos haber hecho mejor y nos pondremos en contacto contigo.
+    </p>
+
+    <div class="negative-box">
+
+      <h3 class="negative-box-title">👇 Deja tu reporte 👇</h3>
+
+      <form id="negativeForm" class="negative-form" onsubmit="return sendNegative(event)">
+        <label>Nombre *</label>
+        <input type="text" required>
+
+        <label>Apellido</label>
+        <input type="text">
+
+        <label>Email *</label>
+        <input type="email" required>
+
+        <label>Mensaje</label>
+        <textarea></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p id="thankYouMessage" class="thank-you hidden">
+        Gracias por dedicar un poco de tu tiempo para ayudarnos a mejorar.
+      </p>
+
+    </div>
+
+  </div>
+
+  <script>
+    function sendNegative(event) {
+      event.preventDefault(); // evita el refresh
+
+      // oculta el formulario
+      document.getElementById("negativeForm").classList.add("hidden");
+
+      // muestra el mensaje de agradecimiento
+      document.getElementById("thankYouMessage").classList.remove("hidden");
+
+      return false;
+    }
+
+    function goHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
